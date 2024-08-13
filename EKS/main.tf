@@ -56,13 +56,13 @@ module "eks" {
 # Data Source For EKS cluster
 
 data "aws_eks_cluster" "cluster" {
-  name = module.eks.cluster_name
+  name = module.eks.cluster_id
 }
 
 # Data Source for EKS Cluster Auth
 
 
 data "aws_eks_cluster_auth" "cluster" {
-  name = module.eks.cluster_name
+  name = module.eks.cluster_id
 }
 
